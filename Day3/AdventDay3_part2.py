@@ -17,6 +17,7 @@ if (__name__ == '__main__'):
 
             for pos_new_sequence in new_sequence:
                 if begin != -1:
+
                     positions_mul = [match.start() for match in re.finditer(subword, line[begin:pos_new_sequence])]
                     for pos in positions_mul:
                         pos_mul = pos + begin
@@ -37,7 +38,9 @@ if (__name__ == '__main__'):
                     else:
 
                         begin = -1
+
                 elif begin != -1:
+                    
                     begin = 0
 
                             
