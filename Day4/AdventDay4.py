@@ -34,7 +34,4 @@ if (__name__ == '__main__'):
 
         #Count "XMAS" in right-to-left columns
 
-        print(number_of_xmas)
-
-
-        
+        print(number_of_xmas)        

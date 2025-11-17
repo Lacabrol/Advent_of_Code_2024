@@ -18,10 +18,7 @@ if (__name__ == '__main__'):
                 letters_upper_row = [array_lines[x-1][y-1], array_lines[x-1][y+1]]
                 letters_lower_row = [array_lines[x+1][y-1], array_lines[x+1][y+1]]
                 if( (letters_upper_row+letters_lower_row).count('M')==2 and (letters_upper_row+letters_lower_row).count('S')==2):
-                    if((letters_upper_row[0]==letters_upper_row[1] and letters_lower_row[0]==letters_lower_row[1]) or letters_upper_row[0]==letters_lower_row[0] and letters_upper_row[1]==letters_lower_row[1]):
+                    if(letters_upper_row[0]==letters_upper_row[1]  or letters_upper_row[0]==letters_lower_row[0]):
                         number_of_xmas += 1
          
         print(number_of_xmas)
-
-
-        

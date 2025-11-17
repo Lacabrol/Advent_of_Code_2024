@@ -42,6 +42,5 @@ if (__name__ == '__main__'):
                 elif begin != -1:
                     
                     begin = 0
-
                             
         print(final_sum)
