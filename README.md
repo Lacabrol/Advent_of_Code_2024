@@ -24,7 +24,7 @@ To run any of the solutions locally:
 
 3. Run the Python file:
     ```bash
-   python AdventDay1.py
+   python3 AdventDay1.py
     ```
 
 ## Let's Connect !
