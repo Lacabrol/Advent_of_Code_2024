@@ -2,14 +2,17 @@ import numpy as np
 
 def find_xmas(tab):
     number_of_xmas = 0
+    # Count occurrences of "XMAS" and "SAMX" in each line
     for line in tab : 
         number_of_xmas += ( line.count("XMAS")) + (line.count("SAMX"))
     return number_of_xmas
 
 def convert_to_string(lines):
+    # Convert list of lists of characters back to list of strings
     return [''.join(line) for line in lines]
 
 def get_diagonals(matrix):
+    # Get all diagonals from the matrix
     diags = [matrix[::-1,:].diagonal(i) for i in range(-matrix.shape[0]+1,matrix.shape[0])]
     diags.extend(matrix.diagonal(i) for i in range(matrix.shape[0],-matrix.shape[0],-1))
     return diags
