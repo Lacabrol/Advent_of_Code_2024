@@ -19,13 +19,10 @@ if (__name__ == '__main__'):
         for i in range(0,len(lines),4):
             lines[i] = lines[i].replace('+',' ').replace(',',' ')
             button_A = [int(x) for x in lines[i].split() if x.isdigit()]
-            print(button_A)
             lines[i+1] = lines[i+1].replace('+',' ').replace(',',' ')
             button_B = [int(x) for x in lines[i+1].split() if x.isdigit()]
-            print(button_B)
             lines[i+2] = lines[i+2].replace('=',' ').replace(',',' ')
             prize = [int(x) for x in lines[i+2].split() if x.isdigit()]
-            print(prize)
             nb_B_pressed = prize[0]//button_B[0]
             if(nb_B_pressed>100):
                 nb_B_pressed = 100
@@ -33,10 +30,8 @@ if (__name__ == '__main__'):
 
             current_x = nb_B_pressed*button_B[0]
             current_y = nb_B_pressed*button_B[1]
-            print(f"Starting at position: ({current_x},{current_y}) with {nb_B_pressed} B pressed")
 
             while(nb_B_pressed>0 and nb_A_pressed<=100):
-                print(f"Current position: ({current_x},{current_y}) with {nb_A_pressed} A pressed and {nb_B_pressed} B pressed")
                 if(current_x==prize[0] and current_y==prize[1]):
                     final_sum += nb_A_pressed*3 + nb_B_pressed*1
                     break
