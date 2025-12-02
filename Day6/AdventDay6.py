@@ -41,6 +41,3 @@ if (__name__ == '__main__'):
 
         # Print the count of 'X' in the final array
         print(len(np.where(array_copy == 'X')[0]))
-
-
-
