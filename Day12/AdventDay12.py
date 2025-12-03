@@ -1,14 +1,16 @@
 import numpy as np
 
 if __name__ == '__main__':
+    # Open the input file "input.txt" in read mode
     with open("input12.txt") as f:
 
+        # Read all lines from the file into a list and convert to a numpy array
         array = np.array([list(line.strip()) for line in f.readlines()])
 
         # Initialize a visited array to keep track of visited positions
         visited = np.zeros_like(array, dtype=bool)
 
-        # Initialize final score
+        # Initialize variables
         final_score, element, stack = 0, None, None
         region_size, perimeter = 0, 0
         neighbourx, neighboury = 0, 0
