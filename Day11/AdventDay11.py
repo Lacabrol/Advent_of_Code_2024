@@ -6,6 +6,7 @@ if (__name__ == '__main__'):
         line = [int(x) for x in line[0].strip().split()]  # Get the first line and strip whitespace
         # Initialize variables
         next_line=[]
+        first_half, second_half = '', ''
 
         # Process for 25 iterations
         for i in range(25):
