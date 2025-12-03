@@ -53,8 +53,9 @@ def loop_check(array):
     return False
 
 if __name__ == '__main__':
+    # Open the input file "input.txt" in read mode
     with open("input6.txt", "r") as f:
-        lines = f.readlines()
+        lines = f.readlines() # Read all lines from the file into a list
         array = np.array([list(line.strip()) for line in lines])
 
         # Find starting position (cannot place obstruction there)
