@@ -33,13 +33,14 @@ if (__name__ == '__main__'):
         array_shape = (101, 103)
         array = np.zeros(array_shape, dtype=int)
 
-        # Process each line in the input
+       
         for i in range(10000):
+             # Process each line in the input
             for line in lines:
                 # Extract integers from the line
                 pos_and_vel=list(map(int, numbers.findall(line)))
 
-                # Calculate new positions based on velocity and a time factor (100)
+                # Calculate new positions based on velocity and a time factor (i)
                 x = convert_to_pos_in_array(pos_and_vel[0] + (i * pos_and_vel[2]), array_shape[0])
                 y = convert_to_pos_in_array(pos_and_vel[1] + (i * pos_and_vel[3]), array_shape[1])
                 array[x][y] = 1
